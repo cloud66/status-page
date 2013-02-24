@@ -182,6 +182,7 @@ header[role=banner] {
 .lead .em {
 	text-transform: uppercase;
 	color: #444;
+    font-weight: bold;
 }
 .primary-list {
 	line-height: 0;
@@ -277,6 +278,74 @@ footer[role=contentinfo] nav {
     font-size: 1.8rem;
 }
 
+
+@keyframes "rotate" {
+ from {
+    -webkit-transform: rotate(0deg);
+       -moz-transform: rotate(0deg);
+       -o-transform: rotate(0deg);
+       -ms-transform: rotate(0deg);
+       transform: rotate(0deg);
+ }
+ to {
+    -webkit-transform: rotate(360deg);
+       -moz-transform: rotate(360deg);
+       -o-transform: rotate(360deg);
+       -ms-transform: rotate(360deg);
+       transform: rotate(360deg);
+ }
+
+}
+
+@-moz-keyframes rotate {
+ from {
+   -moz-transform: rotate(0deg);
+   transform: rotate(0deg);
+ }
+ to {
+   -moz-transform: rotate(360deg);
+   transform: rotate(360deg);
+ }
+
+}
+
+@-webkit-keyframes "rotate" {
+ from {
+   -webkit-transform: rotate(0deg);
+   transform: rotate(0deg);
+ }
+ to {
+   -webkit-transform: rotate(360deg);
+   transform: rotate(360deg);
+ }
+
+}
+
+@-ms-keyframes "rotate" {
+ from {
+   -ms-transform: rotate(0deg);
+   transform: rotate(0deg);
+ }
+ to {
+   -ms-transform: rotate(360deg);
+   transform: rotate(360deg);
+ }
+
+}
+
+@-o-keyframes "rotate" {
+ from {
+   -o-transform: rotate(0deg);
+   transform: rotate(0deg);
+ }
+ to {
+   -o-transform: rotate(360deg);
+   transform: rotate(360deg);
+ }
+
+}
+
+
 /* --------------------------------------------------------------------------- 
    Default Desktop styles
    --------------------------------------------------------------------------- */
@@ -290,7 +359,21 @@ footer[role=contentinfo] nav {
 	.logo {
 		width: 64px;
 	}
-
+    
+    .is-loading    {
+        background-image: url(/assets/img/spinner.svg);
+        width: 48px;
+        height: 48px;
+        background-size: contain;
+        position: relative;
+        margin: 20px auto;
+        opacity: .7;
+        -webkit-animation:rotate 1.5s infinite steps(12);
+        -moz-animation:rotate 1.5s infinite steps(12);
+        -ms-animation:rotate 1.5s infinite steps(12);
+        -o-animation:rotate 1.5s infinite steps(12);
+        animation:rotate 1.5s infinite steps(12);  
+    }
 }
 
 
