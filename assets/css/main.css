@@ -221,13 +221,10 @@ header[role=banner] {
 }
 
 .divider:before {
-    border-bottom: 0.05556em solid #FFFFFF;
-    border-top: 0.05556em solid #E0E0E0;
+    border-bottom: 1px solid #FFFFFF;
+    border-top: 1px solid #E0E0E0;
     content: "";
     display: block;
-    height: 0;
-    /*margin-bottom: 1.22222em;*/
-    padding: 0;
 }
 
 [role=contentinfo] {

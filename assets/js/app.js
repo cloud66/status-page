@@ -52,7 +52,7 @@ window.C66Status = (function( $ ){
 		$('time').each(function(i, e) {
 		  var time = moment( $(e).attr('datetime') );
 
-		  $(e).html('<span class="moment">' + time.format('MMM Do, h:mm:ss a') + '</span>');
+		  $(e).html('<span class="moment">' + time.format('MMM Do, h:mm a') + '</span>');
 		});
 	};
 	

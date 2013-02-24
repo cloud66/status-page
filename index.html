@@ -34,7 +34,8 @@
 				</nav>
 			</small>
 		</footer>
-		
+				
+		<!-- == START TEMPLATES ==  -->
 		<script id="title-template" type="text/x-handlebars-template">
 			{{#equal aggregate 'good' }}
 				<i class="em good">All Good</i> &mdash; Cloud 66 and related services are up &amp; running
@@ -49,8 +50,7 @@
 				<i class="em error">Maintenance</i> &mdash; Services are offline for Scheduled Maintenance
 			{{/equal}}
 		</script>
-		
-		<!-- == START TEMPLATES ==  -->
+        
 		<script id="status-template" type="text/x-handlebars-template">
 			<ul class="primary-list primary-list-divider">
 			{{#if status}}
