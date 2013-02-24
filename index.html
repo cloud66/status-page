@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+
+<html lang="en" class="no-js">
+    <head>
+        <meta charset="utf-8">
+        <title>Status | cloud 66</title>
+        <meta name="viewport" content="width=device-width">
+        <link rel="stylesheet" href="assets/css/normalize.css">
+        <link rel="stylesheet" href="assets/css/main.css">
+    </head>
+    <body>
+		<header role="banner">
+			<img class="logo" src="assets/img/logo.svg" alt="">
+			<h1 class="page-title">Cloud 66 Status <time class="js-updated"></time></h1>
+			<p class="lead" id="js-lead">
+				
+			</p>
+		</header>
+		
+		<main role="main">
+			<article id="js-primary-status" class="primary-status divider">
+
+			</article>
+			
+			<article id="js-status-stream" class="status-stream divider">
+
+			</article>
+		</main>
+		
+        <footer role="contentinfo" class="divider">
+			<small>
+				<nav class="hoziz-nav">
+					<a href="http://cloud66.com">Cloud 66</a><a href="mailto:support@cloud66.com">Contact Support</a><a href="http://cloud66.com/chat">Live Chat</a><a href="https://twitter.com/cloud66">Follow us on Twitter for updates</a>
+				</nav>
+			</small>
+		</footer>
+		
+		<script id="title-template" type="text/x-handlebars-template">
+			{{#equal aggregate 'good' }}
+				<i class="em good">All Good</i> &mdash; Cloud 66 and related services are up &amp; running
+			{{/equal}}
+			{{#equal aggregate 'warning' }}
+				<i class="em warning">Warning</i> &mdash; We are investigating issues with some services
+			{{/equal}}
+			{{#equal aggregate 'error' }}
+				<i class="em error">Error</i> &mdash; We&#8217;re working to resolve a Major service incident
+			{{/equal}}
+			{{#equal aggregate 'maintenance' }}
+				<i class="em error">Maintenance</i> &mdash; Services are offline for Scheduled Maintenance
+			{{/equal}}
+		</script>
+		
+		<!-- == START TEMPLATES ==  -->
+		<script id="status-template" type="text/x-handlebars-template">
+			<ul class="primary-list primary-list-divider">
+			{{#if status}}
+			  {{#each status}}
+			    <li>
+					{{title}} <span class="pri-status {{status}}">{{status}}</span>
+				</li>
+			  {{/each}}
+			{{/if}}
+			</ul>
+		</script>
+		
+		<script id="stream-template" type="text/x-handlebars-template">
+			<ul class="status-stream-list">
+			{{#if history}}
+			  {{#each history}}
+			    <li>
+					<time class="update-time" datetime="{{last_change}}">{{last_change}}</time> 
+					<div class="state">
+						<h4 class="resource-title {{status}}">{{title}}</h4> 
+						<p class="resource-message">{{text}}</p>
+					</div>
+				</li>
+			  {{/each}}
+			{{/if}}
+			</ul>
+		</script>
+		<!-- == END TEMPLATES ==  -->
+		
+		<script src="assets/js/vendor/jquery-1.9.0.min.js"></script>
+		<script src="assets/js/vendor/handlebars.js"></script>
+		<script src="assets/js/vendor/moment.js"></script>
+        <script src="assets/js/plugins.js"></script>
+        <script src="assets/js/app.js"></script>
+    </body>
+</html>
