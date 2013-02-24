@@ -168,6 +168,10 @@ header[role=banner] {
     line-height: 1;
 	color: #333;
 }
+.page-title span {
+    font-weight: 200;
+    color: #666;
+}
 .resource-title {
     margin: 0;
     line-height: inherit;
@@ -242,13 +246,6 @@ header[role=banner] {
 .warning { color: #EA8407 !important; }
 .error 	 { color: #CC3333 !important; }
 
-.update-time {
-    float: left;
-}
-.state {
-    margin-left: 12em;
-}
-
 footer[role=contentinfo] nav {
     margin-top: 0.8em;
     font-size: 12px;
@@ -278,6 +275,26 @@ footer[role=contentinfo] nav {
     font-size: 1.8rem;
 }
 
+.big-error {
+    padding: 1.3em 0;
+    text-align: center;
+    font-weight: bold;
+}
+
+.is-loading    {
+    background-image: url(/assets/img/spinner.svg);
+    width: 38px;
+    height: 38px;
+    background-size: contain;
+    position: relative;
+    margin: 20px auto;
+    opacity: .7;
+    -webkit-animation:rotate 1.5s infinite steps(12);
+    -moz-animation:rotate 1.5s infinite steps(12);
+    -ms-animation:rotate 1.5s infinite steps(12);
+    -o-animation:rotate 1.5s infinite steps(12);
+    animation:rotate 1.5s infinite steps(12);  
+}
 
 @keyframes "rotate" {
  from {
@@ -361,18 +378,15 @@ footer[role=contentinfo] nav {
 	}
     
     .is-loading    {
-        background-image: url(/assets/img/spinner.svg);
         width: 48px;
-        height: 48px;
-        background-size: contain;
-        position: relative;
-        margin: 20px auto;
-        opacity: .7;
-        -webkit-animation:rotate 1.5s infinite steps(12);
-        -moz-animation:rotate 1.5s infinite steps(12);
-        -ms-animation:rotate 1.5s infinite steps(12);
-        -o-animation:rotate 1.5s infinite steps(12);
-        animation:rotate 1.5s infinite steps(12);  
+        height: 48px; 
+    }
+    
+    .update-time {
+        float: left;
+    }
+    .state {
+        margin-left: 12em;
     }
 }
 

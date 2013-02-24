@@ -13,7 +13,7 @@ window.C66Status = (function( $ ){
 
     var config = {
         dataSource: 'status.json',
-        interval: 30000
+        interval: 60000
     };
 
     var init = (function() {
@@ -45,7 +45,8 @@ window.C66Status = (function( $ ){
     }
 
     var displayDataError = function() {
-        console.log('display an error');
+        var msg = '<div class="error big-error">Ah heck &mdash; there was issue retrieving status data, please check Twitter for updates</div>';
+        $('.is-loading').removeClass('is-loading').html( msg );
     };
 	
 	var initPlugins = function() {
@@ -75,6 +76,7 @@ window.C66Status = (function( $ ){
 		 	tmpCompiled = Handlebars.compile( tmplSource );
 	
 		$('#js-status-stream').html( tmpCompiled( json ) );
+        $('footer[role=contentinfo]').addClass('divider');
 	}
 
 })( jQuery );
