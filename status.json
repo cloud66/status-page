@@ -1,56 +1,80 @@
 {
-	"last_change" : "2013-02-20Z00:10:23",
-	"aggregate" : "warning",
+	"last_change" : "2013-02-25Z17:24:00",
+	"aggregate" : "good",
 	"status" :
 	[
 		{
 			"id" : "1",
 			"title" : "Deployment Gateways",
-			"text" : "Something is not quite right there",
-			"status" : "warning",
-			"last_change" : "2013-02-20Z00:10:23"
+			"text" : "All deployment gateways are working normally",
+			"status" : "good",
+			"last_change" : "2013-02-24T17:24:00Z"
 		},
 		{
 			"id" : "2",
 			"title" : "Terminal Gateways",
-			"text" : "Shit's runnin!",
 			"status" : "good",
-			"last_change" : "2013-02-20Z00:10:23"
+			"text" : "All terminal gateways are working normally",
+			"last_change" : "2013-02-24T17:24:00Z"
 		},
 		{
 			"id" : "3",
 			"title" : "Web Console",
-			"text" : "All systems are go",
 			"status" : "good",
-			"last_change" : "2013-02-20Z00:10:23"
+			"text" : "Web console is working normally",
+			"last_change" : "2013-02-24T17:24:00Z"
 		},
 		{
 			"id" : "4",
 			"title" : "API",
-			"text" : "Sorry - shit's fucked up",
-			"status" : "error",
-			"last_change" : "2013-02-20Z00:10:23"
+			"status" : "good",
+			"text" : "API is functioning working normally",
+			"last_change" : "2013-02-24T17:24:00Z"
+		},
+		{
+		 	"id" : "5",
+			"title" : "Documentation Search",
+			"status" : "good",
+			"text" : "Document search is working normally",
+			"last_change" : "2013-02-24T17:24:00Z"
 		}
 	],
 	"history" :
 	[
 		{
+			"id" : "1",
 			"title" : "Deployment Gateways",
-			"text" : "Sorry, shit's fucked up - hang in there, we're on it.",
-			"status" : "error",
-			"last_change" : "2008-07-17T09:24:17Z"
-		},
-		{
-			"title" : "Deployment Gateways",
-			"text" : "All good - up and running",
+			"text" : "All deployment gateways are working normally",
 			"status" : "good",
-			"last_change" : "2013-02-20Z00:10:23"
+			"last_change" : "2013-02-24T17:24:00Z"
 		},
 		{
+			"id" : "2",
 			"title" : "Terminal Gateways",
-			"text" : "There are some intermittent issues - We're investigating",
-			"status" : "warning",
-			"last_change" : "2013-02-20Z00:10:23"
+			"status" : "good",
+			"text" : "All deployment gateways are working normally",
+			"last_change" : "2013-02-24T17:24:00Z"
+		},
+		{
+			"id" : "3",
+			"title" : "Web Console",
+			"status" : "good",
+			"text" : "Web console is working normally",
+			"last_change" : "2013-02-24T17:24:00Z"
+		},
+		{
+			"id" : "4",
+			"title" : "API",
+			"status" : "good",
+			"text" : "API is functioning working normally",
+			"last_change" : "2013-02-24T17:24:00Z"
+		},
+		{
+		 	"id" : "5",
+			"title" : "Documentation Search",
+			"status" : "good",
+			"text" : "Document search is working normally",
+			"last_change" : "2013-02-24T17:24:00Z"
 		}
 	]
 }
