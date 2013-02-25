@@ -201,6 +201,9 @@ header[role=banner] {
 	line-height: 2em;
 	border-bottom: 1px dotted #ddd;
 }
+.primary-list-divider li:last-child {
+    border: none;
+}
 .pri-status {
     float: right;
     font-weight: bold;
@@ -217,6 +220,9 @@ header[role=banner] {
     padding-bottom: 0.8em;
     margin: 0 0 0.8em;
     border-bottom: 1px solid #eee;
+}
+.status-stream-list li:last-child {
+    border: none;
 }
 .colophon:before {
     background-color: eee;
@@ -364,6 +370,35 @@ footer[role=contentinfo] nav {
 
 }
 
+.fade {
+  opacity: 0;
+  -webkit-transition: opacity 0.2s linear;
+     -moz-transition: opacity 0.2s linear;
+      -ms-transition: opacity 0.2s linear;
+       -o-transition: opacity 0.2s linear;
+          transition: opacity 0.2s linear;
+}
+
+.fade.in {
+  opacity: 1;
+}
+
+/* --------------------------------------------------------------------------- 
+   Smartphones (portrait)
+   --------------------------------------------------------------------------- */
+
+   @media only screen and (max-width : 320px) {
+       html{
+       	    font-size: 54%; /* reduce font-size on phone */
+       }
+       body {
+          
+       }
+       .primary-list {
+           font-size: 18px;
+           font-size: 1.8rem;
+       }
+   }
 
 /* --------------------------------------------------------------------------- 
    Default Desktop styles
