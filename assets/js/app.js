@@ -25,6 +25,7 @@ window.C66Status = (function( $ ){
             cache: false,
             url: config.dataSource
         }).done (function ( response ) {
+            displayUpdateTime( response );
 			displayTitle( response );
             displayStatus( response );
 			displayStream( response );
@@ -57,6 +58,12 @@ window.C66Status = (function( $ ){
 		});
 	};
 	
+    var displayUpdateTime = function( json ) {
+		var tmplSource = $('#update-time-template').html(),
+		 	tmpCompiled = Handlebars.compile( tmplSource );
+		$('.js-updated').html( tmpCompiled( json ) );
+    }
+    
 	var displayTitle = function( json ) {
 		var tmplSource = $('#title-template').html(),
 		 	tmpCompiled = Handlebars.compile( tmplSource );
