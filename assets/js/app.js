@@ -68,14 +68,14 @@ window.C66Status = (function( $ ){
 		var tmplSource = $('#status-template').html(),
 		 	tmpCompiled = Handlebars.compile( tmplSource );
 	
-		$('#js-primary-status').html( tmpCompiled( json ) ).addClass('in');
+		$('#js-primary-status').html( tmpCompiled( json ) );
 	}
 	
 	var displayStream = function( json ) {
 		var tmplSource = $('#stream-template').html(),
 		 	tmpCompiled = Handlebars.compile( tmplSource );
 	
-		$('#js-status-stream').html( tmpCompiled( json ) ).addClass('in');
+		$('#js-status-stream').html( tmpCompiled( json ) );
         $('footer[role=contentinfo]').addClass('divider');
 	}
 
