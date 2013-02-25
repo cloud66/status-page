@@ -214,7 +214,9 @@ header[role=banner] {
     margin-top: 1.8em;
 }
 .status-stream-list li {
-    margin: 0 0 1.8em;
+    padding-bottom: 0.8em;
+    margin: 0 0 0.8em;
+    border-bottom: 1px solid #eee;
 }
 .colophon:before {
     background-color: eee;
@@ -380,6 +382,12 @@ footer[role=contentinfo] nav {
     .is-loading    {
         width: 48px;
         height: 48px; 
+    }
+    
+    .status-stream-list li {
+        margin: 0 0 1.8em;
+        padding-bottom: 0;
+        border-bottom: none;
     }
     
     .update-time {
