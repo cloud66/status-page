@@ -11,17 +11,17 @@
     <body>
 		<header role="banner">
 			<img class="logo" src="assets/img/logo.svg" alt="">
-			<h1 class="page-title">Cloud 66 Status <span>&mdash;</span> <time class="js-updated">Updating</time></h1>
+			<h1 class="page-title">Cloud 66 Status <span>&mdash;</span> <span class="js-updated">Updating</span></h1>
 			<p class="lead" id="js-lead">
 			</p>
 		</header>
 		
 		<main role="main">
-			<article id="js-primary-status" class="primary-status divider fade">
+			<article id="js-primary-status" class="primary-status divider">
                 <div class="is-loading"></div>
 			</article>
 			
-			<article id="js-status-stream" class="status-stream divider fade">
+			<article id="js-status-stream" class="status-stream divider">
 
 			</article>
 		</main>
@@ -35,6 +35,10 @@
 		</footer>
 				
 		<!-- == START TEMPLATES ==  -->
+        <script id="update-time-template" type="text/x-handlebars-template">
+            <time datetime="{{last_change}}">{{last_change}}</time>
+        </script>
+        
 		<script id="title-template" type="text/x-handlebars-template">
 			{{#equal aggregate 'good' }}
 				<i class="em good">All Good</i> &mdash; Cloud 66 and related services are up &amp; running

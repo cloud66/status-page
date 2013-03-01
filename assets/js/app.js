@@ -25,6 +25,7 @@ window.C66Status = (function( $ ){
             cache: false,
             url: config.dataSource
         }).done (function ( response ) {
+            displayUpdateTime( response );
 			displayTitle( response );
             displayStatus( response );
 			displayStream( response );
@@ -57,6 +58,12 @@ window.C66Status = (function( $ ){
 		});
 	};
 	
+    var displayUpdateTime = function( json ) {
+		var tmplSource = $('#update-time-template').html(),
+		 	tmpCompiled = Handlebars.compile( tmplSource );
+		$('.js-updated').html( tmpCompiled( json ) );
+    }
+    
 	var displayTitle = function( json ) {
 		var tmplSource = $('#title-template').html(),
 		 	tmpCompiled = Handlebars.compile( tmplSource );
@@ -68,14 +75,14 @@ window.C66Status = (function( $ ){
 		var tmplSource = $('#status-template').html(),
 		 	tmpCompiled = Handlebars.compile( tmplSource );
 	
-		$('#js-primary-status').html( tmpCompiled( json ) ).addClass('in');
+		$('#js-primary-status').html( tmpCompiled( json ) );
 	}
 	
 	var displayStream = function( json ) {
 		var tmplSource = $('#stream-template').html(),
 		 	tmpCompiled = Handlebars.compile( tmplSource );
 	
-		$('#js-status-stream').html( tmpCompiled( json ) ).addClass('in');
+		$('#js-status-stream').html( tmpCompiled( json ) );
         $('footer[role=contentinfo]').addClass('divider');
 	}
 
