@@ -5,8 +5,12 @@
         <meta charset="utf-8">
         <title>Status | Cloud 66</title>
         <meta name="viewport" content="width=device-width">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
         <link rel="stylesheet" href="assets/css/normalize.css">
         <link rel="stylesheet" href="assets/css/main.css">
+        <link rel="apple-touch-icon" href="http://cdn.cloud66.com/images/cloud66_logo_heartbeat_white.png">
+        <link rel="apple-touch-startup-image" href="http://cdn.cloud66.com/images/cloud66_status_background_small.png">
     </head>
     <body>
 		<header role="banner">
@@ -15,17 +19,17 @@
 			<p class="lead" id="js-lead">
 			</p>
 		</header>
-		
+
 		<main role="main">
 			<article id="js-primary-status" class="primary-status divider">
                 <div class="is-loading"></div>
 			</article>
-			
+
 			<article id="js-status-stream" class="status-stream divider">
 
 			</article>
 		</main>
-		
+
         <footer role="contentinfo" class="">
 			<small>
 				<nav class="hoziz-nav">
@@ -33,12 +37,12 @@
 				</nav>
 			</small>
 		</footer>
-				
+
 		<!-- == START TEMPLATES ==  -->
         <script id="update-time-template" type="text/x-handlebars-template">
             <time datetime="{{last_change}}">{{last_change}}</time>
         </script>
-        
+
 		<script id="title-template" type="text/x-handlebars-template">
 			{{#equal aggregate 'good' }}
 				<i class="em good">All Good</i> &mdash; Cloud 66 and related services are up &amp; running
@@ -53,7 +57,7 @@
 				<i class="em error">Maintenance</i> &mdash; Services are offline for Scheduled Maintenance
 			{{/equal}}
 		</script>
-        
+
 		<script id="status-template" type="text/x-handlebars-template">
 			<ul class="primary-list primary-list-divider">
 			{{#if status}}
@@ -65,15 +69,15 @@
 			{{/if}}
 			</ul>
 		</script>
-		
+
 		<script id="stream-template" type="text/x-handlebars-template">
 			<ul class="status-stream-list">
 			{{#if history}}
 			  {{#each history}}
 			    <li>
-					<time class="update-time" datetime="{{last_change}}">{{last_change}}</time> 
+					<time class="update-time" datetime="{{last_change}}">{{last_change}}</time>
 					<div class="state">
-						<h4 class="resource-title {{status}}">{{title}}</h4> 
+						<h4 class="resource-title {{status}}">{{title}}</h4>
 						<p class="resource-message">{{text}}</p>
 					</div>
 				</li>
@@ -82,7 +86,7 @@
 			</ul>
 		</script>
 		<!-- == END TEMPLATES ==  -->
-		
+
 		<script src="assets/js/vendor/jquery-1.9.0.min.js"></script>
 		<script src="assets/js/vendor/handlebars.js"></script>
 		<script src="assets/js/vendor/moment.js"></script>
